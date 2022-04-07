@@ -1,13 +1,86 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica';
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background: rgb(75, 125, 162);
+}
+
+.Fact {
+  text-align: start;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 2rem 0;
+  background: white;
+  min-width: 700px;
+  max-width: 700px;
+}
+
+.Fact > p {
+  margin-top: 0.75rem;
+  line-height: 135%;
+}
+
+#deleteButton {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;
+  transition: all 0.15s ease-in-out;
+  background-color: white;
+}
+
+#deleteButton:hover {
+  background: red;
+  color: white;
+}
+
+.FactList {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1px solid pink; */
+}
+
+.NewNoteFormContainer {
+  padding: 1rem;
+}
+
+.NewNoteForm {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.NewNoteForm > input {
+  margin: 0.4rem;
+  height: 2.5rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  padding: 0.75rem;
+  background: white;
+}
+
+.NewNoteForm > button {
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  width: 25%;
+  margin: 0.4rem auto;
+  transition: all 0.1s ease-in-out;
+}
+
+.NewNoteForm > button:hover {
+  background: black;
+  color: white;
 }
