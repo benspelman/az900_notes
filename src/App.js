@@ -19,19 +19,23 @@ function App() {
 	const addNote = (e, headingText, bodyText) => {
 		e.preventDefault();
 
-		const newNotes = [
-			...notes,
-			{ id: 500, heading: `${headingText.value}`, body: `${bodyText.value}` },
-		];
+		if ((headingText.value === "") | (bodyText.value === "")) {
+			alert("Please fill both text fields before submitting");
+		} else {
+			const newNotes = [
+				...notes,
+				{ id: 500, heading: `${headingText.value}`, body: `${bodyText.value}` },
+			];
 
-		setNotes(newNotes);
-		headingText.value = "";
-		bodyText.value = "";
+			setNotes(newNotes);
+			headingText.value = "";
+			bodyText.value = "";
+		}
 	};
 
 	if (notes.length === 0) {
 		return (
-			<div>
+			<div className="NewNoteFormContainer">
 				<h2>There are no notes left</h2>
 				<button id="deleteButton" onClick={() => setNotes(notesList)}>
 					Refresh notes
