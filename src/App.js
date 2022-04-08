@@ -25,6 +25,8 @@ function App() {
 		];
 
 		setNotes(newNotes);
+		headingText.value = "";
+		bodyText.value = "";
 	};
 
 	if (notes.length === 0) {
