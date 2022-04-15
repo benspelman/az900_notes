@@ -3,26 +3,27 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Helvetica';
+  transition: all 0.3s ease-in-out;
 }
 
 body {
-  background: rgb(75, 125, 162);
+  background: white;
 }
 
 .Fact {
+  background: rgb(246, 247, 249);
   text-align: start;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   border-radius: 10px;
   padding: 2rem;
   margin: 2rem 0;
-  background: white;
   min-width: 700px;
   max-width: 700px;
 }
 
 .Fact > p {
   margin-top: 0.75rem;
-  line-height: 135%;
+  line-height: 140%;
 }
 
 #deleteButton {
@@ -31,7 +32,7 @@ body {
   background: none;
   border: none;
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   transition: all 0.15s ease-in-out;
   background-color: white;
 }
@@ -46,7 +47,17 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* border: 1px solid pink; */
+}
+
+nav {
+  width: 80vw;
+  max-width: 700px;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav h1 {
+  font-size: 2rem;
 }
 
 .NewNoteFormContainer {
@@ -56,11 +67,13 @@ body {
 .NewNoteForm {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 70vw;
+  max-width: 700px;
   margin: 0 auto;
 }
 
 .NewNoteForm > input {
+  width: 100%;
   margin: 0.4rem auto;
   height: 3rem;
   border-radius: 5px;
@@ -68,9 +81,7 @@ body {
   outline: none;
   padding: 0.75rem;
   background: white;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  min-width: 700px;
-  max-width: 700px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .NewNoteForm > button {
@@ -81,9 +92,26 @@ body {
   width: 25%;
   margin: 0.4rem auto;
   transition: all 0.25s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background: rgb(246, 247, 249);
 }
 
 .NewNoteForm > button:hover {
   background: black;
   color: white;
+}
+
+/* DARK MODE STYLES */
+.App--dark {
+  background: rgb(41, 43, 51);
+  color: white;
+}
+
+.App--dark .Fact {
+  background: rgb(57,60,72);
+  color: white;
+}
+
+.App--dark .NewNoteForm button:hover {
+  background: rgb(91, 157, 199)
 }

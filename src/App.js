@@ -5,11 +5,17 @@ import "./App.css";
 import NewNoteForm from "./Components/NewNoteForm";
 
 function App() {
+	const [darkMode, setDarkMode] = useState(true);
 	const [notes, setNotes] = useState([]);
 
 	useEffect(() => {
 		setNotes(notesList);
 	}, []);
+
+	const toggleDarkMode = () => {
+		const newDarkMode = !darkMode;
+		setDarkMode(newDarkMode);
+	};
 
 	const removeNote = (id) => {
 		const newNotes = notes.filter((note) => note.id !== id);
@@ -45,8 +51,13 @@ function App() {
 	}
 
 	return (
-		<div className="App">
-			<FactList notes={notes} removeNote={removeNote} />
+		<div className={darkMode ? `App--dark` : `App`}>
+			<FactList
+				notes={notes}
+				removeNote={removeNote}
+				toggleDarkMode={toggleDarkMode}
+				darkModeCheck={darkMode}
+			/>
 			<NewNoteForm addNote={addNote} />
 		</div>
 	);

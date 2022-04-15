@@ -14,4 +14,9 @@ export let notesList = [
 		heading: "CapEx vs OpEx",
 		body: "Capital Expenditure is money spend by an organisation to acquire/maintain fixed assets such as IT hardware/infrastructure. Operational Expenditure is monthly expenditures that the organisation uses to run its operation - such as Azure.",
 	},
+	{
+		id: 4,
+		heading: "Azure Load Balancer",
+		body: "A load balancer allows yous to evenly distribute traffic to multiple servers in one or more data center. If a data center or sever becomes unavailable, the load balancer will route the traffic to only available data centers with servers.",
+	},
 ];

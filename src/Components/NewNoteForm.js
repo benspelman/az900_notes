@@ -1,8 +1,8 @@
 const NewNoteForm = ({ addNote }) => {
 	return (
 		<div className="NewNoteFormContainer">
-			<h2>Add new note</h2>
 			<form className="NewNoteForm">
+				<h2>Add new note</h2>
 				<input id="headingText" type="text" placeholder="Heading" />
 				<input id="bodyText" type="text" placeholder="Body" />
 				<button
