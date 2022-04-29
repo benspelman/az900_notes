@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Helvetica';
-  transition: all 0.3s ease-in-out;
 }
 
 body {
@@ -19,6 +18,11 @@ body {
   margin: 2rem 0;
   min-width: 700px;
   max-width: 700px;
+  transition: all 0.35s ease-in-out; 
+}
+
+.FactList h1 {
+  transition: all 0.35s ease-in-out;
 }
 
 .Fact > p {
@@ -103,13 +107,12 @@ nav h1 {
 
 /* DARK MODE STYLES */
 .App--dark {
-  background: rgb(41, 43, 51);
   color: white;
+  background: rgb(41, 43, 51);
 }
 
 .App--dark .Fact {
   background: rgb(57,60,72);
-  color: white;
 }
 
 .App--dark .NewNoteForm button:hover {
